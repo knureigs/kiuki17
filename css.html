@@ -9,7 +9,16 @@
         * {
             /* background-color: red; */
         }
-    a[href^="http"] {
+     /* [href^="http:"] {
+        background-color: red;
+    } */
+     /* [class*="mylink"] {
+        background-color: red;
+    } */
+    /* [class~="mylink"] {
+        background-color: red;
+    } */
+    [class|="mylink"] {
         background-color: red;
     }
     </style>
@@ -22,5 +31,14 @@
     <a href="http://cist.nure.ua/ias/app/tt/f?p=778:4:283128046184698::NO:::" target="_blank">Link</a>
     <br>
     <a href="#" title="qwerty">Link</a>
+    <br>
+    <br><br>
+
+    <a href="#" class = "mylink obsolete">Link1</a><br>
+    <a href="#" target="_blank" class = "mylink-warning">Link2</a><br>
+    <a href="https://knureigs.github.io/itech/" target="_blank">Link3</a><br>
+    <a href="http://dec.nure.ua/" target="_blank">Link4</a><br>
+    <a href="https://ru.wikipedia.org">Link5</a><br>
+    
 </body>
 </html>
