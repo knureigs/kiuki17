@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script>
+        function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+var foo = getParameterByName('foo');
+if(foo)
+{
+    console.log(foo);
+
+ var xhr = new XMLHttpRequest();
+ xhr.open('GET', 'https://postman-echo.com/get?bar='+ foo, true);
+
+ xhr.onload = function () {
+     console.dir(xhr);
+};
+
+ xhr.send(null);
+ }
+
+
+    </script>
 </head>
 <body>
     КИУКИ-17
